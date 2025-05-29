@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jogos para o tédio</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="shortcut icon" href="/jogosfavicon.png" type="imagem de console-icon">
+
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="imagem-topo"><img src="/imagem_um.png" alt="Logo do Site" width="200px" height="100px"></div>
+
+        <button class="menu" onclick="playHihi()">Menu</button>
+
+        <div class="funcionar">
+            <h2> Apresentação dos jogos </h2>
+            <p> Agradecimentos ao Ivan</p>
+        </div>
+
+        <div class="search-bar-container">
+            <input type="text" id="searchInput" placeholder="Pesquise por jogos...">
+            <button onclick="searchGames()">🔎</button>
+
+        </div>
+        <div class="jogos">
+            <div class="jogo" onclick="abrirJogo('https://mrprince2099.github.io/projeto/')">
+                <img src="/joken_po.png" alt="Imagem do Jogo 1" width="480px" height="250px">
+            </div>
+
+            <div class="jogo" onclick="abrirJogo('https://kodo-xeno.github.io/Projetos/')">
+                <img src="/forca.png" alt="Imagem do Jogo da Forca" width="480px" height="250px">
+            </div>
+
+            <div class="jogo" onclick="abrirJogo('https://matheusandreweb.github.io/projeto/')">
+                <img src="/jogo_inseto.png.png" alt="Imagem do Jogo do Inseto" width="480px" height="250px">
+            </div>
+        </div>
+
+        
+
+        <div class="creative-section">
+            <h2>Não achou o que procurava?</h2>
+            <p>Explore nossa seção de recomendações personalizadas ou descubra novos gêneros!</p>
+            <div class="recommendation-cards">
+                <div class="card">
+                    <h3>Recomendações Diárias</h3>
+                    <p>Sugestões baseadas nos seus jogos favoritos.</p>
+                    <a href="#" class="btn">Ver Mais</a>
+                </div>
+                <div class="card">
+                    <h3>Novos Lançamentos</h3>
+                    <p>Fique por dentro das últimas novidades do mundo dos jogos.</p>
+                    <a href="#" class="btn">Conferir</a>
+                </div>
+                <div class="card">
+                    <h3>Jogos Clássicos</h3>
+                    <p>Reviva a nostalgia com os títulos que marcaram época.</p>
+                    <a href="#" class="btn">Explorar</a>
+                </div>
+            </div>
+            <p class="call-to-action">Sua jornada de diversão começa aqui!</p>
+        </div>
+        <audio id="hihi-audio" src="/audio do michael jackson 1.mp3"></audio>
+    </div>
+   
+</body>
+
+<script src="script.js"></script>
+
+</html>

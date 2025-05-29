@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="shortcut icon"
+      href="/assets/favicon/deadpool_1.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/assets/css/" />
+
+    <style>
+      :root {
+        --colordark: #440909;
+        --color-white: #fff;
+        --color-light: #d4d4d4;
+        --color-carmerm: #dc143c;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        background-color: var(--colordark);
+        color: var(--color-white);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      body {
+        align-items: center;
+        gap: 16px;
+        min-height: 100vh;
+      }
+      .clock {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        flex-wrap: wrap;
+      }
+      /* o que muda de parênteses para chaves?
+    () atribui
+{} seleciona */
+      .clock span {
+        color: var(--color-carmerm);
+        font-size: 150px;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+      }
+      .clock span:not(:last-child)::after {
+        content: ":";
+        margin-bottom: 25px;
+        color: var(--color-white);
+      }
+      h2 {
+        width: 100%;
+        text-align: center;
+      }
+      h2 strong {
+        color: var(--color-carmerm);
+      }
+      @media screen and (max-widht: 992px) {
+        .clock span {
+          font-size: 50px;
+        }
+        .clock span:not(:last-child)::after {
+          display: block;
+        }
+      }
+    </style>
+
+    <body>
+      <div class="clock">
+        <span id="hours">00</span>
+        <span id="minutes">00</span>
+        <span id="seconds">00</span>
+      </div>
+
+      <h2>
+        <strong> @_eu_gabs18 - vocacao 2025 </strong>
+      </h2>
+    </body>
+  </head>
+
+  <script>
+    const hoursElement = document.getElementById(`hours`);
+
+    const minutesElement = document.getElementById(`minutes`);
+
+    const secondsElement = document.getElementById(`seconds`);
+
+    function fixtime(time) {
+      return time < 10 ? `0` + time : time;
+    }
+    function newtime() {
+      const date = new Date();
+      const hours = date.getHours();
+      const minutes = date.getMinutes();
+      const seconds = date.getSeconds();
+      hoursElement.textContent = fixtime(hours);
+      minutesElement.textContent = fixtime(minutes);
+      secondsElement.textContent = fixtime(seconds);
+    }
+    newtime();
+    setInterval(newtime, 1000);
+  </script>
+</html>

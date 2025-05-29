@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curso</title>
+  </head>
+  <style>
+    body {
+      height: 100vh;
+      background-color: #000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    h1 {
+      color: #fff;
+      font-size: 4rem;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    }
+    p {
+      color: #fff;
+      max-width: 700px;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      letter-spacing: 2px;
+      line-height: 22px;
+      margin-bottom: 40px;
+    }
+    button {
+      padding: 0;
+      margin: 0;
+      border: transparent;
+      background: transparent;
+      color: #9e4141;
+      border: 2px solid white;
+      padding: 10px 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+    .cursor {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 15px;
+      height: 15px;
+      background: yellow;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+  <body>
+    <div class="cursor"></div>
+    <div class="container">
+        <h1> Teste seu mouse</h1>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus aut
+        maiores sequi adipisci. Iste asperiores numquam accusamus quidem impedit
+        libero exercitationem quis minima dolores cupiditate, culpa labore
+        deleniti? Tempora, doloremque!
+      </p>
+      <button>Saiba_mais</button>
+    </div>
+  </body>
+  <script>
+    const cursor = document.querySelector(".cursor");
+    document.addEventListener("mousemove", function(event) {
+    moveCursor(event.pageX, event.pageY);
+    });
+    const moveCursor = function(pageX, pageY) {
+        cursor.style.left = pageX + "px";
+        cursor.style.top = pageY + "px" ;
+    };
+  </script>
+</html>

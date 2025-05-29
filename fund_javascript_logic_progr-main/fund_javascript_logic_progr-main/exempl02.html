@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dia_de_Deploy</title>
+    <style>
+      :root {
+        --playnogame: #fff;
+        /* fundo claro */
+        --theweekend: #000;
+        /* fundo escuro */
+        --tomkaulitz: #7d1ad4;
+        /* esse de cima é para o primeiro botão */
+        --kompa: #6e17b9;
+        /* botão do hover */
+        --gasparzinho: #000;
+        /* para texto escuro */
+        --branquelas: #fff;
+        /* texto claro */
+      }
+
+      [data-theme="dark"] {
+        --fundo-claro: #000;
+        --fundo-escuro: #fff;
+        --texto-claro: #fff;
+        --texto-escuro: #000;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: var(--playnogame);
+        color: var(--fundo-claro);
+        /*  */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      div {
+        background-color: var(--theweekend);
+        color: var(--branquelas);
+        flex-direction: column;
+        gap: 2rem;
+        border-radius: 0.9rem;
+      }
+      button {
+        background-color: var(--tomkaulitz);
+        color: var(--gasparzinho);
+        padding: 0.4rem;
+        border: none;
+        border: 50%;
+        width: 80px;
+        height: 80px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: var(--kompa);
+        transition: 0.8s;
+      }
+      svg {
+        color: var(--branquelas);
+        /* não faço ideia de como ajustar o svg , mas acxredito eu que sej aquilo que ele eplicou sobre as cores */
+        width: 34px;
+        height: 34px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Dia de Deploy</h1>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque
+        corrupti sint distinctio veritatis, consequatur est quos ipsa iure illum
+        ipsum, iste placeat sit non necessitatibus beatae alias? Ipsum,
+        similique tenetur!
+      </p>
+      <button id="btn-dark-mode"></button>
+    </div>
+  </body>
+  <script>
+        const darkSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+     fill="currentColor" class="w-6 h-6"><path d="M12 3v1m8.793 9.793-1.414 1.414m-7.07
+    0 7.07 7.071m1.414-1.414L21 21v-1m-4.243-8.485-1.414-1.414M12 21v-1m-8.793-9.793L5
+     5.05M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4Z"/></svg>`;
+
+     const lightSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+     fill="currentColor" class="w-6 h-6"><path fill-rule="evenodd" d="M9.5 12a2.5 2.5
+     0 1 1 5 0 2.5 2.5 0 0 1-5 0ZM12 1a7 7 0 1 0 0 14A7 7 0 0 0 12 1ZM2 12C2 6.477 6.477
+     2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Z" clip-rule="evenodd" /></svg>`;
+     if(theme==="light"){ btndarkmode
+
+     }
+       
+  </script>
+</html>
